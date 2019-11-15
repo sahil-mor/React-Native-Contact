@@ -1,0 +1,152 @@
+************ Home Screen *******************************
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff"
+  },
+  listItem: {
+    flexDirection: "row",
+    padding: 20
+  },
+  iconContainer: {
+    width: 50,
+    height: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#B83227",
+    borderRadius: 100
+  },
+  contactIcon: {
+    fontSize: 28,
+    color: "#fff"
+  },
+  infoContainer: {
+    flexDirection: "column"
+  },
+  infoText: {
+    fontSize: 16,
+    fontWeight: "400",
+    paddingLeft: 10,
+    paddingTop: 2
+  },
+  floatButton: {
+    borderWidth: 1,
+    borderColor: "rgba(0,0,0,0.2)",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 60,
+    position: "absolute",
+    bottom: 10,
+    right: 10,
+    height: 60,
+    backgroundColor: "#B83227",
+    borderRadius: 100
+  }
+});
+
+
+************ Home Screen *******************************
+
+************ Add New Contact Screen *******************************
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    margin: 10,
+    height: 500
+  },
+  inputItem: {
+    margin: 10
+  },
+  button: {
+    backgroundColor: "#B83227",
+    marginTop: 40
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold"
+  },
+  empty: {
+    height: 500,
+    backgroundColor: "#FFF"
+  }
+});
+
+************ Add New Contact Screen *******************************
+
+************ View Contact Screen *******************************
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff"
+  },
+  contactIconContainer: {
+    height: 200,
+    backgroundColor: "#B83227",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  contactIcon: {
+    fontSize: 100,
+    fontWeight: "bold",
+    color: "#fff"
+  },
+  nameContainer: {
+    width: "100%",
+    height: 70,
+    padding: 10,
+    backgroundColor: "rgba(255,255,255,0.5)",
+    justifyContent: "center",
+    position: "absolute",
+    bottom: 0
+  },
+  name: {
+    fontSize: 24,
+    color: "#000",
+    fontWeight: "900"
+  },
+  infoText: {
+    fontSize: 18,
+    fontWeight: "300"
+  },
+  actionContainer: {
+    flexDirection: "row"
+  },
+  actionButton: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  actionText: {
+    color: "#B83227",
+    fontWeight: "900"
+  }
+});
+
+************ View Contact Screen *******************************
+
+
+************ Edit Contact Screen *******************************
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    margin: 10
+  },
+  inputItem: {
+    margin: 10
+  },
+  button: {
+    backgroundColor: "#B83227",
+    marginTop: 40
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold"
+  }
+});
+
+************ Edit Contact Screen *******************************
