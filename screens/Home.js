@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View,TouchableOpacity,FlatList,AsyncStorage,Image } from 'react-native';
 import {Card} from 'native-base'
 import {Entypo} from "@expo/vector-icons"
+import {showMessage} from 'react-native-flash-message'
+import FlashMessage from 'react-native-flash-message'
 export default class Home extends React.Component {
   constructor(props){
     super(props);
@@ -17,6 +19,16 @@ export default class Home extends React.Component {
     const {navigation} = this.props
     navigation.addListener("willFocus",()=>{
       this.getAllContact()
+      if(this.props.navigation.getParam("newContactAdded")){
+        showMessage({
+          message : "Contact Added Successfully",
+          type : "success",
+        })
+      }else if(this.props.navigation.getParam("deleteContact")){
+        showMessage({
+          message : "Contact Deleted Successfully",type : 'danger'
+        })
+      }
     })
   }
 
@@ -78,6 +90,7 @@ export default class Home extends React.Component {
           style={styles.floatButton} >
           <Entypo name='plus' size={30} color='#fff' />
         </TouchableOpacity>
+        <FlashMessage position="bottom" />
       </View>
     );
   }

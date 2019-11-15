@@ -39,7 +39,9 @@ export default class AddContactScreen extends React.Component {
       JSON.stringify(contact)
       )
       .then(() => {
-        this.props.navigation.goBack()
+        this.props.navigation.navigate('Home',{
+          newContactAdded : true
+        })
       })
       .catch(error => {
         console.log(error)

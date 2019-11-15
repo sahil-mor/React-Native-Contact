@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View,AsyncStorage,TouchableOpacity,ScrollView,Linking,Platform,Alert,Image,Share } from 'react-native';
 import {Card , CardItem} from 'native-base'
 import {Entypo} from '@expo/vector-icons'
-
 export default class ViewContactScreen extends React.Component {
   constructor(props){
     super(props);
@@ -101,7 +100,9 @@ export default class ViewContactScreen extends React.Component {
           text : "OK", onPress : async () => { 
           await AsyncStorage.removeItem(key)
           .then( () => {
-            this.props.navigation.goBack()
+            this.props.navigation.navigate('Home',{
+              deleteContact : true,newContactAdded : false
+            })
           } )
           .catch(error => {console.log(error)})
           }
@@ -196,7 +197,6 @@ export default class ViewContactScreen extends React.Component {
                 </TouchableOpacity>
             </CardItem>
         </Card>
-     
        </ScrollView>
     );
   }

@@ -12,7 +12,7 @@ export default class EditContactScreen extends React.Component {
       phone : "",
       email : "",
       address : "",
-      image : null,
+      isImageUpdate : false,
       key : "",
     }
   }
@@ -40,7 +40,9 @@ export default class EditContactScreen extends React.Component {
         address : this.state.address,
         phone : this.state.phone,
         email : this.state.email ,
-        image : this.state.image
+      }
+      if(this.state.isImageUpdate){
+        contact.image = this.state.image
       }
       await AsyncStorage.mergeItem(key,JSON.stringify(contact))
       .then(()=>{
@@ -66,6 +68,7 @@ export default class EditContactScreen extends React.Component {
   }
 
   getImage = async () => {
+    this.setState({ isImageUpdate : true })
     var result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing : true,
       aspect : [2, 2],
@@ -145,7 +148,7 @@ export default class EditContactScreen extends React.Component {
           </Button>
           <View style={styles.empty}></View>
           <View style={{height : 500,backgroundColor : "white"}}></View>
-      </ScrollView>
+        </ScrollView>
     </TouchableWithoutFeedback>
     );
   }
